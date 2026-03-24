@@ -9,7 +9,7 @@ may want to subscribe to `GitHub's tag feed
 
 0.14.0
 ======
-unreleased
+2026-03-24
 
 * CHANGE the ``pkg_resources`` library is no longer required.
 * FIX the location of caching database to ``$XDG_CACHE_HOME``
