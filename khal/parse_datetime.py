@@ -242,8 +242,7 @@ def guessdatetimefstr(
         (datetimefwords, "", False, False),
     ]:
         # if a `short` format contains a year, treat it as a `long` format
-        if infer_year and "97" in dt.datetime(1997, 10, 11).strftime(dtformat):
-            infer_year = False
+        infer_year = infer_year and "97" not in dt.datetime(1997, 10, 11).strftime(dtformat)
         try:
             dtstart = fun(dtime_list, dtformat, infer_year=infer_year)
         except (ValueError, DateTimeParseError):
